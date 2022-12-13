@@ -8,9 +8,10 @@ import plotly.express as px
 from dash import no_update
 
 #imprting data to the program...
-df =  pd.read_csv('automobileEDA.csv', 
+airline_data =  pd.read_csv('practice programs/airline_data.csv', 
                             encoding = "ISO-8859-1",
-                            )
+                            dtype={'Div1Airport': str, 'Div1TailNum': str, 
+                                   'Div2Airport': str, 'Div2TailNum': str})
 
 #creating application with dash module....
 app = dash.Dash(__name__)
